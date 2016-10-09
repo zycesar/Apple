@@ -1,0 +1,1178 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+}
+
+.header {
+  width: 100%;
+  background-color: black;
+  position: absolute;
+  z-index: 99;
+  min-width: 1024px;
+}
+
+.header .header-inner {
+  max-width: 980px;
+  padding: 0 22px;
+  margin: 0 auto;
+}
+
+.header .header-inner .search-bigbox {
+  width: 682px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  margin: auto;
+  z-index: -11;
+}
+
+.header .header-inner .search-bigbox .search-box-inner {
+  width: 100%;
+  height: 44px;
+  overflow: hidden;
+}
+
+.header .header-inner .search-bigbox .search-box-inner .search-litbox {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  transform: translate3d(850px, 0, 0);
+}
+
+.header .header-inner .search-bigbox .search-box-inner .search-litbox .search-logo {
+  width: 40px;
+  height: 44px;
+  float: left;
+  background: url(../images/search-logo.svg) no-repeat center center;
+}
+
+.header .header-inner .search-bigbox .search-box-inner .search-litbox input {
+  width: 642px;
+  height: 22px;
+  float: left;
+  margin-top: 11px;
+  border: none;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  word-spacing: normal;
+}
+
+.header .header-inner .search-bigbox .card {
+  width: 682px;
+  height: 196px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.header .header-inner .search-bigbox .card li {
+  transform: translate3d(800px, 0, 0);
+  margin: 4px -32px;
+}
+
+.header .header-inner .search-bigbox .card li a {
+  display: block;
+  height: 30px;
+  color: #999;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: bold;
+  padding: 0 48px;
+}
+
+.header .header-inner .search-bigbox .card li a:hover {
+  color: #0070c9;
+  background: #F2F2F2;
+}
+
+.header .header-inner .search-bigbox .card li h3 {
+  width: 602px;
+  margin: 0 auto;
+  color: #999;
+  font-size: 12px;
+}
+
+.header .header-inner .search-bigbox .card li:nth-child(1) {
+  transition: transform 0.5s ease 0.05s;
+}
+
+.header .header-inner .search-bigbox .card li:nth-child(2) {
+  transition: transform 0.5s ease 0.1s;
+}
+
+.header .header-inner .search-bigbox .card li:nth-child(3) {
+  transition: transform 0.5s ease 0.15s;
+}
+
+.header .header-inner .search-bigbox .card li:nth-child(4) {
+  transition: transform 0.5s ease 0.2s;
+}
+
+.header .header-inner .search-bigbox .card li:nth-child(5) {
+  transition: transform 0.5s ease 0.25s;
+}
+
+.header .header-inner .search-bigbox .card section {
+  margin: 0 40px;
+  padding: 24px 0 15px 0;
+}
+
+.header .header-inner .pc-list {
+  width: 100%;
+  text-align: justify;
+  height: 44px;
+  overflow: hidden;
+}
+
+.header .header-inner .pc-list::after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+  height: 0;
+}
+
+.header .header-inner .pc-list li {
+  height: 44px;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+.header .header-inner .pc-list li a {
+  display: block;
+  color: #fff;
+  height: 100%;
+  transform: translate3d(0, 0, 0);
+  transition: opacity .3s ease, transform .2s ease;
+}
+
+.header .header-inner .pc-list li a:hover {
+  opacity: 0.6;
+}
+
+.header .header-inner .pc-list li .apple {
+  width: 20px;
+  background: url("../images/apple.svg") no-repeat center center;
+}
+
+.header .header-inner .pc-list li .mac {
+  width: 31px;
+  background: url("../images/mac.svg") no-repeat center center;
+}
+
+.header .header-inner .pc-list li .ipad {
+  width: 30px;
+  background: url("../images/ipad.svg") no-repeat center center;
+}
+
+.header .header-inner .pc-list li .iphone {
+  width: 48px;
+  background: url("../images/iphone.svg") no-repeat center center;
+}
+
+.header .header-inner .pc-list li .watch {
+  width: 44px;
+  background: url("../images/watch.svg") no-repeat center center;
+}
+
+.header .header-inner .pc-list li .music {
+  width: 40px;
+  background: url("../images/music.svg") no-repeat center center;
+}
+
+.header .header-inner .pc-list li .support {
+  width: 57px;
+  background: url("../images/support.svg") no-repeat center center;
+}
+
+.header .header-inner .pc-list li .search {
+  width: 40px;
+  background: url("../images/search.svg") no-repeat center center;
+}
+
+.header .header-inner .pc-list li .bag {
+  width: 18px;
+  background: url("../images/bag.svg") no-repeat center center;
+}
+
+.header .header-inner {
+  position: relative;
+}
+
+.header .header-inner .close {
+  position: absolute;
+  display: none;
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  color: #fff;
+  right: 6px;
+  bottom: 0;
+  font-weight: normal;
+}
+
+.header .header-inner .close .x {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.header .header-inner .close .x span {
+  position: absolute;
+  transition: transform 0.8s ease 1s;
+  transform: scale(0, 0);
+  width: 1px;
+  height: 15px;
+  background: #fff;
+}
+
+.header .header-inner .close .x .t {
+  left: 9px;
+  top: 10px;
+  transform: rotate(45deg);
+}
+
+.header .header-inner .close .x .b {
+  left: 9px;
+  top: 10px;
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    width: 100%;
+    background-color: black;
+    position: absolute;
+    z-index: 99;
+    min-width: 320px;
+  }
+  .header .header-inner {
+    max-width: 980px;
+    padding: 0 22px;
+    margin: 0 auto;
+  }
+  .header .header-inner .search-bigbox {
+    width: 682px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    margin: auto;
+    z-index: -11;
+  }
+  .header .header-inner .search-bigbox .search-box-inner {
+    width: 100%;
+    height: 44px;
+    overflow: hidden;
+  }
+  .header .header-inner .search-bigbox .search-box-inner .search-litbox {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    transform: translate3d(850px, 0, 0);
+  }
+  .header .header-inner .search-bigbox .search-box-inner .search-litbox .search-logo {
+    width: 40px;
+    height: 44px;
+    float: left;
+    background: url(../images/search-logo.svg) no-repeat center center;
+  }
+  .header .header-inner .search-bigbox .search-box-inner .search-litbox input {
+    width: 642px;
+    height: 22px;
+    float: left;
+    margin-top: 11px;
+    border: none;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    word-spacing: normal;
+  }
+  .header .header-inner .search-bigbox .card {
+    width: 682px;
+    height: 196px;
+    background: #fff;
+    overflow: hidden;
+  }
+  .header .header-inner .search-bigbox .card li {
+    transform: translate3d(800px, 0, 0);
+    margin: 4px -32px;
+  }
+  .header .header-inner .search-bigbox .card li a {
+    display: block;
+    height: 30px;
+    color: #999;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: bold;
+    padding: 0 48px;
+  }
+  .header .header-inner .search-bigbox .card li a:hover {
+    color: #0070c9;
+    background: #F2F2F2;
+  }
+  .header .header-inner .search-bigbox .card li h3 {
+    width: 602px;
+    margin: 0 auto;
+    color: #999;
+    font-size: 12px;
+  }
+  .header .header-inner .search-bigbox .card li:nth-child(1) {
+    transition: transform 0.5s ease 0.05s;
+  }
+  .header .header-inner .search-bigbox .card li:nth-child(2) {
+    transition: transform 0.5s ease 0.1s;
+  }
+  .header .header-inner .search-bigbox .card li:nth-child(3) {
+    transition: transform 0.5s ease 0.15s;
+  }
+  .header .header-inner .search-bigbox .card li:nth-child(4) {
+    transition: transform 0.5s ease 0.2s;
+  }
+  .header .header-inner .search-bigbox .card li:nth-child(5) {
+    transition: transform 0.5s ease 0.25s;
+  }
+  .header .header-inner .search-bigbox .card section {
+    margin: 0 40px;
+    padding: 24px 0 15px 0;
+  }
+  .header .header-inner .pc-list {
+    width: 100%;
+    text-align: justify;
+    height: 44px;
+    overflow: hidden;
+  }
+  .header .header-inner .pc-list::after {
+    content: '';
+    width: 100%;
+    display: inline-block;
+    height: 0;
+  }
+  .header .header-inner .pc-list li {
+    height: 44px;
+    display: inline-block;
+    padding: 0 10px;
+  }
+  .header .header-inner .pc-list li a {
+    display: block;
+    color: #fff;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+    transition: opacity .3s ease, transform .2s ease;
+  }
+  .header .header-inner .pc-list li a:hover {
+    opacity: 0.6;
+  }
+  .header .header-inner .pc-list li .apple {
+    width: 20px;
+    background: url("../images/apple.svg") no-repeat center center;
+  }
+  .header .header-inner .pc-list li .mac {
+    width: 31px;
+    background: url("../images/mac.svg") no-repeat center center;
+  }
+  .header .header-inner .pc-list li .ipad {
+    width: 30px;
+    background: url("../images/ipad.svg") no-repeat center center;
+  }
+  .header .header-inner .pc-list li .iphone {
+    width: 48px;
+    background: url("../images/iphone.svg") no-repeat center center;
+  }
+  .header .header-inner .pc-list li .watch {
+    width: 44px;
+    background: url("../images/watch.svg") no-repeat center center;
+  }
+  .header .header-inner .pc-list li .music {
+    width: 40px;
+    background: url("../images/music.svg") no-repeat center center;
+  }
+  .header .header-inner .pc-list li .support {
+    width: 57px;
+    background: url("../images/support.svg") no-repeat center center;
+  }
+  .header .header-inner .pc-list li .search {
+    width: 40px;
+    background: url("../images/search.svg") no-repeat center center;
+  }
+  .header .header-inner .pc-list li .bag {
+    width: 18px;
+    background: url("../images/bag.svg") no-repeat center center;
+  }
+  .header .header-inner {
+    position: relative;
+  }
+  .header .header-inner .close {
+    position: absolute;
+    z-index: 5;
+    width: 44px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    color: #fff;
+    right: 6px;
+    bottom: 0;
+    font-size: 30px;
+    font-weight: normal;
+  }
+  .header .header-inner .close .x {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .header .header-inner .close .x span {
+    position: absolute;
+    width: 1px;
+    height: 30px;
+    background: #fff;
+  }
+  .header .header-inner .close .x .t {
+    left: 9px;
+    top: 10px;
+    transform: rotate(45deg);
+  }
+  .header .header-inner .close .x .b {
+    left: 9px;
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    z-index: 99;
+    min-width: 320px;
+  }
+  .header .header-inner {
+    max-width: 980px;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .header .header-inner .phone-list {
+    width: 100%;
+    height: 48px;
+    display: block;
+    text-align: justify;
+    overflow: hidden;
+  }
+  .header .header-inner .phone-list li {
+    display: inline-block;
+  }
+  .header .header-inner .phone-list::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 0;
+  }
+  .header .header-inner .phone-list .list-nav {
+    width: 48px;
+    height: 48px;
+    position: relative;
+    cursor: pointer;
+  }
+  .header .header-inner .phone-list .list-nav #line {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s ease;
+  }
+  .header .header-inner .phone-list .list-nav #line .t, .header .header-inner .phone-list .list-nav #line .b {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+  }
+  .header .header-inner .phone-list .list-nav #line .t .one, .header .header-inner .phone-list .list-nav #line .t .two, .header .header-inner .phone-list .list-nav #line .b .one, .header .header-inner .phone-list .list-nav #line .b .two {
+    background: #fff;
+    position: absolute;
+    width: 17px;
+    height: 1px;
+  }
+  .header .header-inner .phone-list .list-nav #line .t .one, .header .header-inner .phone-list .list-nav #line .b .one {
+    top: 19px;
+    left: 10px;
+    transition: transform 0.3s ease;
+  }
+  .header .header-inner .phone-list .list-nav #line .t .two, .header .header-inner .phone-list .list-nav #line .b .two {
+    top: 27px;
+    left: 10px;
+  }
+  .header .header-inner .phone-list .list-logo {
+    width: 40px;
+    height: 48px;
+  }
+  .header .header-inner .phone-list .list-logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/apple.svg") no-repeat center center;
+  }
+  .header .header-inner .phone-list .list-bag {
+    width: 50px;
+    height: 48px;
+    transition: transform 1s ease;
+  }
+  .header .header-inner .phone-list .list-bag a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url("../images/bag.svg") no-repeat center center;
+  }
+  .header .header-inner .search-bigbox {
+    display: none;
+  }
+  .header .header-inner .pc-list {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+  }
+  .header .header-inner .pc-list li {
+    display: block;
+    border-bottom: 1px solid #333333;
+  }
+  .header .header-inner .pc-list li:nth-child(1) {
+    display: none;
+  }
+  .header .header-inner .pc-list li:nth-child(9) {
+    display: none;
+  }
+  .header .header-inner .close .x {
+    display: none;
+  }
+  .header.list-naving {
+    height: 100%;
+    background: #000;
+  }
+  .header.list-naving .header-inner .phone-list .list-nav #line {
+    transform: rotate(45deg);
+  }
+  .header.list-naving .header-inner .phone-list .list-nav #line .t {
+    transform: translateY(8px);
+  }
+  .header.list-naving .header-inner .phone-list .list-nav #line .t .one {
+    transform: rotate(90deg);
+  }
+  .header.list-naving .header-inner .phone-list .list-bag {
+    transform: translate3d(300px, 0, 0);
+  }
+  .header.list-naving .header-inner .pc-list {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: #000000;
+  }
+  .header.list-naving .header-inner .pc-list li {
+    display: block;
+    border-bottom: 1px solid #333333;
+  }
+  .header.list-naving .header-inner .pc-list li:nth-child(1) {
+    display: none;
+  }
+  .header.list-naving .header-inner .pc-list li:nth-child(9) {
+    display: none;
+  }
+}
+
+.header.searching {
+  height: auto;
+  width: 100%;
+  background-color: #000;
+}
+
+.header.searching .header-inner {
+  height: 100%;
+}
+
+.header.searching .header-inner .pc-list {
+  height: 100%;
+}
+
+.header.searching .header-inner .pc-list .menu {
+  transform: scale(0, 0);
+}
+
+.header.searching .header-inner .pc-list .bag {
+  display: none;
+}
+
+.header.searching .header-inner .search-bigbox {
+  z-index: 999;
+  opacity: 1;
+}
+
+.header.searching .header-inner .search-bigbox .search-box-inner .search-litbox {
+  transform: translate3d(0, 0, 0);
+}
+
+.header.searching .header-inner .search-bigbox .card li {
+  transform: translate3d(0, 0, 0);
+}
+
+.header.searching .header-inner .close {
+  display: block;
+  cursor: pointer;
+}
+
+.hidden {
+  height: 100%;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+  height: auto;
+}
+
+.content .content_t {
+  position: relative;
+  width: 100%;
+  height: 540px;
+  overflow: hidden;
+  padding-top: 44px;
+}
+
+.content .content_t .imgbox {
+  width: 100%;
+  height: 100%;
+}
+
+.content .content_t .imgbox a {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.content .content_t .imgbox .iphone-7 {
+  background: url(../images/iphone_large.jpg) no-repeat bottom center;
+  background-size: contain;
+  background-color: #000000;
+}
+
+.content .content_t .imgbox .watch {
+  background: url(../images/watch_large.jpg) no-repeat bottom center;
+  background-size: contain;
+  background-color: #F2F2F2;
+}
+
+.content .content_t .imgbox .airport {
+  background: url(../images/airpods_large.jpg) no-repeat bottom center;
+  background-size: contain;
+  background-color: #FFFFFF;
+}
+
+.content .content_t .imgbox .even {
+  background: url(../images/event_large.jpg) no-repeat bottom center;
+  background-size: contain;
+  background-color: #050308;
+}
+
+.content .content_t .imgbox .active {
+  display: block;
+}
+
+.content .content_t .imgbox .leave {
+  z-index: 4;
+  animation: leave 1s ease both;
+}
+
+@keyframes leave {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-300px, 0, 0);
+  }
+}
+
+.content .content_t .imgbox .right {
+  z-index: 5;
+  animation: right 1s ease both;
+}
+
+@keyframes right {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.content .content_t .imgbox .left {
+  z-index: 4;
+  animation: left 1s ease both;
+}
+
+@keyframes left {
+  0% {
+    transform: translate3d(-100px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.content .content_t .imgbox .enter {
+  z-index: 5;
+  animation: enter 1s ease both;
+}
+
+@keyframes enter {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+.content .content_t .dot-list {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+}
+
+.content .content_t .dot-list li {
+  display: inline-block;
+  width: 50px;
+  height: 2px;
+  background: #E6E6E6;
+  cursor: pointer;
+  padding: 5px 0;
+  background-clip: content-box;
+}
+
+.content .content_t .dot-list li.active {
+  background-color: #808080;
+}
+
+.content .content_t .dot-list::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  height: 0;
+  clear: both;
+}
+
+.content .content_t .btnbox {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  margin: auto;
+  margin-top: -32px;
+  z-index: 90;
+}
+
+.content .content_t .btnbox div {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(180, 180, 180, 0.25);
+  cursor: pointer;
+  color: #fff;
+  font-size: 40px;
+  text-align: center;
+  line-height: 64px;
+  font-weight: normal;
+  font-family: "宋体";
+}
+
+.content .content_t .btnbox div:hover {
+  background: #333;
+}
+
+.content .content_t .btnbox .l {
+  float: left;
+}
+
+.content .content_t .btnbox .r {
+  float: right;
+}
+
+.content .content_b {
+  width: 100%;
+}
+
+.content .content_b .row {
+  overflow: hidden;
+}
+
+.content .content_b ul {
+  width: 100%;
+  height: auto;
+}
+
+.content .content_b ul li {
+  height: 200px;
+  float: left;
+}
+
+.content .content_b ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+}
+
+@media screen and (min-width: 1024px) {
+  .content .content_b ul .d-1 {
+    width: 8.33333%;
+  }
+  .content .content_b ul .d-2 {
+    width: 16.66667%;
+  }
+  .content .content_b ul .d-3 {
+    width: 25%;
+  }
+  .content .content_b ul .d-4 {
+    width: 33.33333%;
+  }
+  .content .content_b ul .d-5 {
+    width: 41.66667%;
+  }
+  .content .content_b ul .d-6 {
+    width: 50%;
+  }
+  .content .content_b ul .d-7 {
+    width: 58.33333%;
+  }
+  .content .content_b ul .d-8 {
+    width: 66.66667%;
+  }
+  .content .content_b ul .d-9 {
+    width: 75%;
+  }
+  .content .content_b ul .d-10 {
+    width: 83.33333%;
+  }
+  .content .content_b ul .d-11 {
+    width: 91.66667%;
+  }
+  .content .content_b ul .d-12 {
+    width: 100%;
+  }
+  .content .content_b ul .ios a {
+    background: url("../images/ios_large.jpg") no-repeat center center;
+  }
+  .content .content_b ul .music a {
+    background: url("../images/music_large.jpg") no-repeat center center;
+  }
+  .content .content_b ul .watchos a {
+    background: url("../images/watchos_large.jpg") no-repeat center center;
+  }
+  .content .content_b ul .iphone_upgrade a {
+    background: url("../images/iphone_upgrade_large.jpg") no-repeat center center;
+  }
+}
+
+.content .content_b ul .col {
+  float: left;
+}
+
+@media screen and (max-width: 1024px) {
+  .content .content_b ul .m-1 {
+    width: 8.33333%;
+  }
+  .content .content_b ul .m-2 {
+    width: 16.66667%;
+  }
+  .content .content_b ul .m-3 {
+    width: 25%;
+  }
+  .content .content_b ul .m-4 {
+    width: 33.33333%;
+  }
+  .content .content_b ul .m-5 {
+    width: 41.66667%;
+  }
+  .content .content_b ul .m-6 {
+    width: 50%;
+  }
+  .content .content_b ul .m-7 {
+    width: 58.33333%;
+  }
+  .content .content_b ul .m-8 {
+    width: 66.66667%;
+  }
+  .content .content_b ul .m-9 {
+    width: 75%;
+  }
+  .content .content_b ul .m-10 {
+    width: 83.33333%;
+  }
+  .content .content_b ul .m-11 {
+    width: 91.66667%;
+  }
+  .content .content_b ul .m-12 {
+    width: 100%;
+  }
+  .content .content_b ul .ios a {
+    background: url("../images/ios_medium.jpg") no-repeat center center;
+  }
+  .content .content_b ul .music a {
+    background: url("../images/music_medium.jpg") no-repeat center center;
+  }
+  .content .content_b ul .watchos a {
+    background: url("../images/watchos_medium.jpg") no-repeat center center;
+  }
+  .content .content_b ul .iphone_upgrade a {
+    background: url("../images/iphone_upgrade_medium.jpg") no-repeat center center;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .content .content_b ul .s-1 {
+    width: 8.33333%;
+  }
+  .content .content_b ul .s-2 {
+    width: 16.66667%;
+  }
+  .content .content_b ul .s-3 {
+    width: 25%;
+  }
+  .content .content_b ul .s-4 {
+    width: 33.33333%;
+  }
+  .content .content_b ul .s-5 {
+    width: 41.66667%;
+  }
+  .content .content_b ul .s-6 {
+    width: 50%;
+  }
+  .content .content_b ul .s-7 {
+    width: 58.33333%;
+  }
+  .content .content_b ul .s-8 {
+    width: 66.66667%;
+  }
+  .content .content_b ul .s-9 {
+    width: 75%;
+  }
+  .content .content_b ul .s-10 {
+    width: 83.33333%;
+  }
+  .content .content_b ul .s-11 {
+    width: 91.66667%;
+  }
+  .content .content_b ul .s-12 {
+    width: 100%;
+  }
+  .content .content_b ul .ios a {
+    background: url("../images/ios_small.jpg") no-repeat center center;
+  }
+  .content .content_b ul .music a {
+    background: url("../images/music_small.jpg") no-repeat center center;
+  }
+  .content .content_b ul .watchos a {
+    background: url("../images/watchos_small.jpg") no-repeat center center;
+  }
+  .content .content_b ul .iphone_upgrade a {
+    background: url("../images/iphone_upgrade_small.jpg") no-repeat center center;
+  }
+}
+
+.floor {
+  height: 336px;
+  background: #f2f2f2;
+  margin: 0 auto;
+}
+
+.floor .floor-inner {
+  max-width: 980px;
+  padding: 0 22px;
+  margin: 0 auto;
+}
+
+.floor .floor-inner nav {
+  text-align: justify;
+  padding-top: 20px;
+}
+
+.floor .floor-inner nav .lists {
+  max-width: 180px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.floor .floor-inner nav .lists .lists-content {
+  width: 100%;
+  height: 180px;
+}
+
+.floor .floor-inner nav .lists label h3 {
+  font-size: 12px;
+  line-height: 1.6;
+  font-weight: normal;
+}
+
+.floor .floor-inner nav .lists ul {
+  margin-right: 20px;
+}
+
+.floor .floor-inner nav .lists ul li {
+  width: 100%;
+  height: 20px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.floor .floor-inner nav .lists ul li:hover {
+  text-decoration: underline;
+}
+
+.floor .floor-inner nav:after {
+  content: '';
+  width: 100%;
+  display: inline-block;
+}
+
+.floor .floor-inner section .footer-shop {
+  font-size: 12px;
+  border-bottom: 1px solid #e3e3e3;
+}
+
+.floor .floor-inner section .footer-shop span a {
+  color: #0070c9;
+  font-size: 12px;
+}
+
+.floor .floor-inner section .footer-local {
+  float: right;
+}
+
+.floor .floor-inner section .footer-local a {
+  background-size: 16px 16px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding-right: 5px;
+  cursor: pointer;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: 0% 50%;
+}
+
+.floor .floor-inner section .footer-legal {
+  padding-top: 20px;
+}
+
+.floor .floor-inner section .footer-legal .footer-legal-l {
+  font-size: 12px;
+  float: left;
+}
+
+.floor .floor-inner section .footer-legal .footer-legal-r {
+  float: right;
+}
+
+.floor .floor-inner section .footer-legal .footer-legal-r a {
+  font-size: 12px;
+  color: #0070c9;
+}
+
+.floor .floor-inner p {
+  margin-top: 20px;
+  color: #999;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .floor {
+    height: 336px;
+    min-width: 320px;
+    background: #f2f2f2;
+    margin: 0 auto;
+  }
+  .floor .floor-inner {
+    padding: 0 22px;
+    margin: 0 auto;
+  }
+  .floor .floor-inner nav {
+    padding-top: 20px;
+    overflow: hidden;
+  }
+  .floor .floor-inner nav .lists {
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  .floor .floor-inner nav .lists .lists-content {
+    min-width: 100%;
+    min-height: 2px;
+  }
+  .floor .floor-inner nav .lists .lists-content ul {
+    margin-right: 20px;
+  }
+  .floor .floor-inner nav .lists .lists-content ul li {
+    width: 100%;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .floor {
+    min-width: 320px;
+    height: auto;
+  }
+  .floor .floor-inner nav {
+    width: 100%;
+  }
+  .floor .floor-inner nav .lists {
+    display: block;
+    max-width: 768px;
+  }
+  .floor .floor-inner nav .lists .lists-content {
+    width: 100%;
+    height: auto;
+  }
+  .floor .floor-inner nav .lists label {
+    width: 100%;
+  }
+  .floor .floor-inner nav .lists label h3 {
+    width: 100%;
+    height: 39px;
+    cursor: pointer;
+    background: #f2f2f2;
+    font-size: 14px;
+    line-height: 3.6;
+    font-weight: normal;
+    border-bottom: 1px solid #e3e3e3;
+  }
+  .floor .floor-inner nav .lists ul {
+    display: none;
+  }
+  .floor .floor-inner nav .lists ul li {
+    width: 100%;
+    height: 38px;
+    padding: 0 14px;
+    line-height: 38px;
+  }
+  .floor .floor-inner nav .lists .uls {
+    display: block;
+    height: auto;
+  }
+  .floor .floor-inner nav .lists .uls li {
+    width: 100%;
+    height: 38px;
+    padding: 0 14px;
+    line-height: 38px;
+  }
+}
